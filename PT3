@@ -1,0 +1,59 @@
+#include<iostream>
+#include<fstream>
+#include<string>
+
+using namespace std;
+
+int main(){
+
+    ifstream fin;
+    ofstream fout;
+
+    fout.open("Ptfile.txt", ios::app);
+    fin.open("Ptfile.txt", ios::app);
+
+    string name, gender, age, address, yearandsection, course, 
+    contactnumber;
+ 
+   cout << "Enter your Name : ";
+   getline(cin,name);
+   fin >> name;
+
+   fout << "Name : " << name << endl;
+
+   cout << "Enter your Gender : "; 
+   cin >> gender;
+   fin >> gender;
+
+    fout << "Gender : " << gender << endl;
+  
+  cin.ignore();
+  cout << "Enter your Address : "; 
+  getline(cin,address);
+  fin >> address;
+  
+  fout << "Address : " << address << endl;
+ 
+  cout << "Enter your Year and section : ";
+  cin >> yearandsection;
+  fin >> yearandsection;
+
+  fout << "Year and Section : " << yearandsection << endl;
+  cin.ignore();
+
+  cout << "Enter your Course : "; 
+  getline(cin,course);
+  fin >> course;
+
+  fout << "Course : " << course << endl;
+
+  cout << "Enter your Contact number : "; 
+  getline(cin,contactnumber);
+  fin >> contactnumber;
+
+  fout << "Contact Number : " << contactnumber << endl;
+
+  fout.close();
+  fin.close();
+  return 0;
+}
